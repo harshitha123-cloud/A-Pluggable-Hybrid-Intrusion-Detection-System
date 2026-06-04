@@ -45,11 +45,27 @@ def predict_intrusion(*values):
         f"Confidence: {(hybrid_prob if pred else 1-hybrid_prob)*100:.2f}%"
     )
 
-    suggestion = (
-        "Block IP, Reset Credentials, Enable MFA, Review Logs"
-        if pred
-        else "No recovery action required."
-    )
+    if pred:
+     suggestion = """
+⚠️ Attack Detected!
+
+📌 Security Suggestions:
+✔ Change account password
+✔ Enable Multi-Factor Authentication
+✔ Monitor suspicious traffic
+✔ Scan system for malware
+
+🔄 Recovery Actions:
+✔ Block suspicious IP address
+✔ Terminate malicious session
+✔ Restore secure connection
+"""
+    else:
+     suggestion = """
+✅ Normal Traffic Detected
+
+✔ No recovery action required
+"""
 
     return result, suggestion
 
