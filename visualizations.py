@@ -7,8 +7,8 @@ from sklearn.metrics import ConfusionMatrixDisplay
 # ==========================================
 xgb_accuracy = 87.79
 rf_accuracy = 88.42
-dnn_accuracy = 87.47
-hybrid_accuracy = 88.63
+dnn_accuracy = 87.68
+hybrid_accuracy = 89.63
 
 plt.figure(figsize=(8, 5))
 
