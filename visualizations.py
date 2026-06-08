@@ -10,7 +10,7 @@ rf_accuracy = 88.42
 dnn_accuracy = 87.68
 hybrid_accuracy = 89.63
 
-plt.figure(figsize=(8, 5))
+plt.figure(figsize=(8, 6))
 
 models = ["XGBoost", "Random Forest", "DNN", "Hybrid IDS"]
 accuracies = [xgb_accuracy, rf_accuracy, dnn_accuracy, hybrid_accuracy]
